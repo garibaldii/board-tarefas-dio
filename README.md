@@ -1,4 +1,4 @@
-📋 Projeto: Board de Gerenciamento de Tarefas
+## 📋 Projeto: Board de Gerenciamento de Tarefas
 Este projeto é um sistema de gerenciamento de tarefas com boards customizáveis, desenvolvido como parte de um desafio prático. Ele permite a criação, visualização e controle de tarefas, com registro no banco de dados MySQL.
 
 💡 Objetivo
