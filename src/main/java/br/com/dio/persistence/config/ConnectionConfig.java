@@ -12,8 +12,8 @@ public class ConnectionConfig {
 
     //subir conexao num contêiner docker
     public static Connection  getConnection() throws SQLException{
-        var url = "jdbc:mysql://localhost:3306/board";
-        var user = "admin";
+        var url = "jdbc:mysql://localhost:3307/board";
+        var user = "root";
         var password = "admin";
         var connection = DriverManager.getConnection(url, user, password);
 
