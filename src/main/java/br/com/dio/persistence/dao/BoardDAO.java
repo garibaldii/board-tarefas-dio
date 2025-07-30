@@ -18,6 +18,7 @@ public class BoardDAO {
     public BoardEntity insert(final BoardEntity entity) throws SQLException {
         var sql = "INSERT INTO BOARDS (name) values (?)";
         try(var statement = connection.prepareStatement(sql)) {
+            statement.setString(1, entity.getName());
             statement.executeUpdate();
 
             if(statement instanceof StatementImpl impl) {
