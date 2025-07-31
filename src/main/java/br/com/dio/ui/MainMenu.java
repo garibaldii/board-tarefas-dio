@@ -46,7 +46,7 @@ public class MainMenu {
         System.out.println("Informe o nome do seu Board");
         entity.setName(scanner.next());
 
-        System.out.println("Seu board terá colunas além das 3 padrões? Se sim, informe quantas, senão digite 0");
+        System.out.println("Seu board tera colunas alem das 3 padroes? Se sim, informe quantas, senao digite 0");
         var additionalColumns = scanner.nextInt();
 
         List<BoardColumnEntity> columns = new ArrayList<>();
@@ -83,7 +83,7 @@ public class MainMenu {
     }
 
     private void selectBoard() throws SQLException {
-        System.out.println("Informe o id do board que deseja selecioand");
+        System.out.println("Informe o id do board que deseja selecionar");
         var id = scanner.nextLong();
         try (var connection = getConnection()) {
             var queryService = new BoardQueryService(connection);
@@ -92,7 +92,7 @@ public class MainMenu {
             optional.ifPresentOrElse
                     (
                             board -> new BoardMenu(board).execute(),
-                            () -> System.out.printf("id %s não encontrado", id)
+                            () -> System.out.printf("id: %s nao encontrado \n", id)
                     );
 
         }
